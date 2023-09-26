@@ -6,8 +6,8 @@
 #=========================================================================================
 
 base_url = "https://example.com"      # Domain name of your website
-title = "Learning about RPi4 Bare Metal"
-description = "Writing about programming directly on the Raspberry Pi 4."
+title = "Computing on Bare Metal"
+description = "Learning about programming directly on a bare metal device."
 default_language = "en"
 theme = "serene"
 output_dir = "public"
@@ -55,6 +55,7 @@ homepage_layout = "about"             # "about" | "list"
 
 sections = [
     { name = "posts", path = "/posts", is_external = false },
+    { name = "glossary", path = "/glossary", is_external = false }
     # { name = "projects", path = "/projects", is_external = false },
     # { name = "about", path = "/about", is_external = false },
     # { name = "github", path = "https://github.com/ads40", is_external = true },

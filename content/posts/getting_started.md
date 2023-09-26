@@ -20,16 +20,56 @@ display_tags = true
 truncate_summary = false
 +++
 
-new post about something...
+There are some valuable resources out there for learning about bare metal
+development on the Raspberry Pi. Here we focus on the Raspberry Pi 4, for which Adam
+Greenwood-Byrne [GitHub: isometimes](https://github.com/isometimes) has written
+an outstanding tutorial that documents his journey
+[from bare metal to a Breakout game](https://github.com/isometimes/rpi4-osdev)
+on the Raspberry Pi 4. We will take this as our starting point, but we will try
+to uncover as much as we can of the "hidden" curriculum involved in this sort of
+bare metal programming project as we go along.
 
 <!-- more -->
 
-more post content...
+## Raspberry Pi 4
 
-Tutorial from Adam Greenwood-Byrne (GitHub: isometimes)
+The Raspberry Pi 4 presents some benefits and challenges by comparison with
+earlier versions of the Raspberry Pi. Overall, it is a much more capable board
+computer. Most importantly, it is available for purchase.
 
-See the tutorial website and GitHub repo
+However, there is no readily available Raspberry Pi 4 machine available for 
+emulation via QEMU: this means that there is more manual work to be done in
+running and testing code in development. While a generic machine could be
+used in QEMU, this would mean that the board-specific devices are not available.
 
-- https://www.rpi4os.com/
-- https://github.com/isometimes/rpi4-osdev
+## Background
+
+Some knowledge of programming is assumed, in no particular language.
+
+Some knowledge of computing architecture and the layers of abstraction involved
+is also assumed, such as might be gained by the completion of the justly
+renowned "From Nand to Tetris" course created by Noam Nisan and Shimon Schocken:
+
+- The 'From Nand to Tetris' website: [https://www.nand2tetris.org/](https://www.nand2tetris.org/)
+- Nisan, Noam, and Shimon Schocken. 2021. *The Elements of Computing Systems:
+  Building a Modern Computer from First Principles*. Second edition. Cambridge,
+  Massachusetts: The MIT Press.
+  - [MIT Press](https://mitpress.mit.edu/9780262539807/the-elements-of-computing-systems/)
+  - [Amazon](https://www.amazon.com/Elements-Computing-Systems-second-Principles/dp/0262539802)
+- The Nand2Tetris courses on Coursera:
+  - [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer)
+  - [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2)
+
+But we will try to spell out assumptions and knowledge as we go along, and in
+particular we will try to define important terminology in the Glossary.
+
+## Set-up
+
+
+
+## Resources
+
+- The RPi4 OS dev Tutorial from Adam Greenwood-Byrne (GitHub: isometimes)
+  - Tutorial website: https://www.rpi4os.com/
+  - GitHub repo: https://github.com/isometimes/rpi4-osdev
 
