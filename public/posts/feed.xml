@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Posts</title>
+	<subtitle>My posts go here.</subtitle>
+	<link href="https://example.com/posts/feed.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://example.com/posts/"/>
+	<updated>2023-09-26T00:00:00+00:00</updated>
+	<id>https://example.com/posts/feed.xml</id>
+	<entry xml:lang="en">
+		<title>Getting started with Raspberry Pi 4 bare metal development</title>
+		<published>2023-09-26T00:00:00+00:00</published>
+		<updated>2023-09-26T00:00:00+00:00</updated>
+        <summary>&lt;p&gt;There are some valuable resources out there for learning about bare metal
+development on the Raspberry Pi. Here we focus on the Raspberry Pi 4, for which Adam
+Greenwood-Byrne &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isometimes&quot;&gt;GitHub: isometimes&lt;&#x2F;a&gt; has written
+an outstanding tutorial that documents his journey
+&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isometimes&#x2F;rpi4-osdev&quot;&gt;from bare metal to a Breakout game&lt;&#x2F;a&gt;
+on the Raspberry Pi 4. We will take this as our starting point, but we will try
+to uncover as much as we can of the &amp;quot;hidden&amp;quot; curriculum involved in this sort of
+bare metal programming project as we go along.&lt;&#x2F;p&gt;
+</summary>
+		<link href="https://example.com/posts/getting-started/" type="text/html"/>
+		<id>https://example.com/posts/getting-started/</id>
+		<content type="html">&lt;p&gt;There are some valuable resources out there for learning about bare metal
+development on the Raspberry Pi. Here we focus on the Raspberry Pi 4, for which Adam
+Greenwood-Byrne &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isometimes&quot;&gt;GitHub: isometimes&lt;&#x2F;a&gt; has written
+an outstanding tutorial that documents his journey
+&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isometimes&#x2F;rpi4-osdev&quot;&gt;from bare metal to a Breakout game&lt;&#x2F;a&gt;
+on the Raspberry Pi 4. We will take this as our starting point, but we will try
+to uncover as much as we can of the &amp;quot;hidden&amp;quot; curriculum involved in this sort of
+bare metal programming project as we go along.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;The Raspberry Pi 4 presents some benefits and challenges by comparison with
+earlier versions of the Raspberry Pi. Overall, it is a much more capable board
+computer. Most importantly, it is available for purchase.&lt;&#x2F;p&gt;
+&lt;p&gt;However, there is no readily available Raspberry Pi 4 machine available for 
+emulation via QEMU: this means that there is more manual work to be done in
+running and testing code in development. While a generic machine could be
+used in QEMU, this would mean that the board-specific devices are not available.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;set-up&quot;&gt;Set-up&lt;a class=&quot;zola-anchor&quot; href=&quot;#set-up&quot; aria-label=&quot;Anchor link for: set-up&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;a class=&quot;zola-anchor&quot; href=&quot;#resources&quot; aria-label=&quot;Anchor link for: resources&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The RPi4 OS dev Tutorial from Adam Greenwood-Byrne (GitHub: isometimes)
+&lt;ul&gt;
+&lt;li&gt;Tutorial website: https:&#x2F;&#x2F;www.rpi4os.com&#x2F;&lt;&#x2F;li&gt;
+&lt;li&gt;GitHub repo: https:&#x2F;&#x2F;github.com&#x2F;isometimes&#x2F;rpi4-osdev&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+</feed>

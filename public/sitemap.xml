@@ -7,9 +7,19 @@
         <loc>https://example.com/categories/</loc>
     </url>
     <url>
+        <loc>https://example.com/categories/rpi4/</loc>
+    </url>
+    <url>
         <loc>https://example.com/posts/</loc>
     </url>
     <url>
+        <loc>https://example.com/posts/getting-started/</loc>
+        <lastmod>2023-09-26</lastmod>
+    </url>
+    <url>
         <loc>https://example.com/tags/</loc>
+    </url>
+    <url>
+        <loc>https://example.com/tags/bare-metal/</loc>
     </url>
 </urlset>
