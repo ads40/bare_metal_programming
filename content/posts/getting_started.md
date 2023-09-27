@@ -20,35 +20,44 @@ display_tags = true
 truncate_summary = false
 +++
 
-There are some valuable resources out there for learning about bare metal
-development on the Raspberry Pi. Here we focus on the Raspberry Pi 4, for which Adam
-Greenwood-Byrne [GitHub: isometimes](https://github.com/isometimes) has written
-an outstanding tutorial that documents his journey
+There are some valuable resources out there for learning about
+[bare metal](/glossary/bare-metal/) development on the Raspberry Pi. Here we
+focus on the Raspberry Pi 4, for which Adam Greenwood-Byrne
+([GitHub: isometimes](https://github.com/isometimes)) has written an outstanding
+tutorial that documents his journey
 [from bare metal to a Breakout game](https://github.com/isometimes/rpi4-osdev)
-on the Raspberry Pi 4. We will take this as our starting point, but we will try
-to uncover as much as we can of the "hidden" curriculum involved in this sort of
-bare metal programming project as we go along.
+on the Raspberry Pi 4.
+
+We will take this as our starting point, but we will try to uncover as much as
+we can of the "hidden" curriculum involved in this sort of bare metal
+programming project as we go along.
 
 <!-- more -->
 
 ## Raspberry Pi 4
 
 The Raspberry Pi 4 presents some benefits and challenges by comparison with
-earlier versions of the Raspberry Pi. Overall, it is a much more capable board
-computer. Most importantly, it is available for purchase.
+earlier versions of the Raspberry Pi.
+
+In terms of benefits, it is a much more capable board computer. And, most
+importantly, it is more readily available for purchase.
 
 However, there is no readily available Raspberry Pi 4 machine available for 
 emulation via QEMU: this means that there is more manual work to be done in
 running and testing code in development. While a generic machine could be
 used in QEMU, this would mean that the board-specific devices are not available.
 
+We will therefore focus on running all our software directly on the Raspberry
+Pi 4 itself.
+
 ## Background
 
 Some knowledge of programming is assumed, in no particular language.
 
 Some knowledge of computing architecture and the layers of abstraction involved
-is also assumed, such as might be gained by the completion of the justly
-renowned "From Nand to Tetris" course created by Noam Nisan and Shimon Schocken:
+is also assumed, but only at a relatively low level, such as might be gained by
+the completion of the justly renowned "From Nand to Tetris" course created by
+Noam Nisan and Shimon Schocken:
 
 - The 'From Nand to Tetris' website: [https://www.nand2tetris.org/](https://www.nand2tetris.org/)
 - Nisan, Noam, and Shimon Schocken. 2021. *The Elements of Computing Systems:
@@ -107,7 +116,7 @@ following items:
 - How the Raspberry Pi 4 machine is designed to behave when it is first turned
   on.
 - How to program for the Raspberry Pi 4 machine when it is operating at the
-  earliest stage of its boot process using ARM-specific assembly language.
+  earliest stage of its boot process, using ARM-specific assembly language.
 - How to run the cross compilation tool chain on our development machine and
   then transfer the resulting compiled programs to the SD card and then into
   the Raspberry Pi.
@@ -122,6 +131,10 @@ these further topics:
   connection to the correct GPIO pins on the Raspberry Pi 4 device.
 - How to configure and run software on our development machine in order to be
   able to communicate via UART with the Raspberry Pi 4.
+
+There is a lot of material here, but it is worth taking the time to set out and
+explain each element properly, to ensure a solid foundation for the rest of the
+work that we will be pursuing.
 
 ## Resources
 
