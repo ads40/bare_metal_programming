@@ -16,22 +16,20 @@ then programming on top of these.
 
 The purpose of these writings is to document a learning path and to try to
 uncover as much of the underlying assumptions and knowledge as possible. The
-layers of abstraction are what makes modern computing simultaneously possible
-but also difficult to get one's head around.
+layers of abstraction are what makes modern computing possible, but also very
+difficult to get one's head around, especially at the start.
 
-## Posts
+## Writing
 
-All posts are listed on the Posts page in order of date.
+All posts can be found here in date order: [Posts](posts/).
 
-- [Posts](posts/)
+Individual projects are organised and set out on the [Projects](projects/) page:
 
-When a project is complete, then a project summary page will be added.
+- [Raspberry Pi 4: bare metal game development](projects/#raspberry-pi-4-bare-metal-game-development)
 
 ## Glossary
 
-We will build a glossary of terminology:
-
-- [Glossary](glossary/)
+Terminology is unpacked and defined in the [Glossary](glossary/).
 
 
 
