@@ -62,6 +62,7 @@ sections = [
     # { name = "github", path = "https://github.com/ads40", is_external = true },
 ]
 blog_section_path = "/posts"
+glossary_section_path = "/glossary"
 
 nav_separator = "::"
 nav_wrapper_left = "{"

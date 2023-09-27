@@ -14,7 +14,7 @@ lang = 'en'
 We work through [@isometimes](https://github.com/isometimes)'s Raspberry Pi 4 
 game development tutorial.
 
-- [Getting Started](posts/getting-started)
+- [Getting Started](/posts/getting-started)
 
 # Completed projects
 

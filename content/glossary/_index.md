@@ -1,10 +1,10 @@
 +++
 title = "Glossary"
 description = "We unpack and define terminology here."
-template = "prose.html"
+sort_by = "title"
+template = "glossary.html"
+page_template = "entry.html"
 
 [extra]
 lang = 'en'
 +++
-
-Some text goes here
