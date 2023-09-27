@@ -77,7 +77,7 @@ and in particular we will try to define important terminology in the Glossary.
 Required physical items:
 
 - Development machine: Linux or WSL2 on Windows is assumed for this tutorial.
-- Raspberry Pi 4 (BCM2711 SOC) which runs an ARM Cortex-A72 processor.
+- Raspberry Pi 4 (BCM2711 SOC) which runs an [ARM Cortex-A72 processor](/glossary/arm-cortex-a72/).
 - USB to TTL serial cable
 - SD card
 - SD card reader (if not built-in to your computer)
