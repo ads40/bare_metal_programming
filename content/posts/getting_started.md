@@ -67,8 +67,8 @@ and in particular we will try to define important terminology in the Glossary.
 
 Required physical items:
 
-- Development machine, preferably Linux (use WSL2 on Windows)
-- Raspberry Pi 4 (BCM2711 SOC)
+- Development machine: Linux or WSL2 on Windows is assumed for this tutorial.
+- Raspberry Pi 4 (BCM2711 SOC) which runs an ARM Cortex-A72 processor.
 - USB to TTL serial cable
 - SD card
 - SD card reader (if not built-in to your computer)
@@ -76,15 +76,57 @@ Required physical items:
 Required software set-up:
 
 - Development environment on your development machine, e.g. VSCode.
-- Cross-compilation ARM tools for the AArch64 bare-metal target 
-  (aarch64-none-elf):
-    - [ARM Developer toolchain downloads](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+- Cross-compilation tools:
+  - On Linux or WSL2 on Windows, use the ARM developer toolchain for the AArch64
+    bare-metal target (aarch64-none-elf):
+    [ARM Developer toolchain downloads](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+  - On MacOS, XCode will need to be installed (and with it `clang`) and then
+    LLVM should be installed -- however, this tutorial does not address the use
+    of these tools.
+- Install a bootable image of Raspberry Pi OS on the SD card:
+  - Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to 
+  - Then make sure that the Raspberry Pi 4 boots with the SD 
 
-We will assume that these items are accessible and/or installed, but we will
-walk through the actual set up to get things working step by step in the next
-post.
+From this point, it will be assumed that these items are accessible and/or 
+installed, in order to focus on the actual set up to get things working step by
+step in the next post.
+
+## The next steps
+
+The critical next steps are:
+
+1. To set up the most basic software platform that can run at the lowest level
+   on the Raspberry Pi 4.
+2. To enable two-way communication with our development machine, operating at 
+   a very low level, so that we can start to interact with the software that we
+   are developing for the Raspberry Pi 4.
+
+In order to do the first item above, we need to know something about the
+following items:
+
+- How the Raspberry Pi 4 machine is designed to behave when it is first turned
+  on.
+- How to program for the Raspberry Pi 4 machine when it is operating at the
+  earliest stage of its boot process using ARM-specific assembly language.
+- How to run the cross compilation tool chain on our development machine and
+  then transfer the resulting compiled programs to the SD card and then into
+  the Raspberry Pi.
+- How to set up the initial version of our kernel -- this is program that will
+  effectively control our computer's operation once the initial bootstrapping
+  program has completed.
+
+In order to complete the second item above, we need to know something about
+these further topics:
+
+- How UART can be configured on the Raspberry Pi 4 via software and via physical
+  connection to the correct GPIO pins on the Raspberry Pi 4 device.
+- How to configure and run software on our development machine in order to be
+  able to communicate via UART with the Raspberry Pi 4.
 
 ## Resources
+
+As always, we stand on the shoulders of giants. These materials are heavily
+dependent on the following published tutorials and how-tos.
 
 - The RPi4 OS dev Tutorial from Adam Greenwood-Byrne [GitHub: `isometimes`](https://github.com/isometimes)
   - Tutorial website: [https://www.rpi4os.com/](https://www.rpi4os.com/)
