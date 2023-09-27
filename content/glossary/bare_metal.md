@@ -1,6 +1,7 @@
 +++
 title = "Bare metal"
 date = 2023-09-27
+draft = true
 +++
 
 "Bare metal" is a colloquial way to refer to programming directly on top of a

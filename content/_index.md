@@ -15,17 +15,15 @@ low level programming in C, through to building up operating system services and
 then programming on top of these.
 
 The purpose of these writings is to document a learning path and to try to
-uncover as much of the underlying assumptions and knowledge as possible. The
-layers of abstraction are what makes modern computing possible, but also very
-difficult to get one's head around, especially at the start.
+uncover as much of the underlying assumptions and required knowledge as
+possible. The layers of abstraction are what makes modern computing possible,
+but also very difficult to get one's head around, especially at the start.
 
-## Writing
+## Content
 
-All posts can be found here in date order: [Posts](posts/).
+All posts are listed on the [Posts](posts/) page in date order.
 
-Individual projects are organised and set out on the [Projects](projects/) page:
-
-- [Raspberry Pi 4: bare metal game development](projects/#raspberry-pi-4-bare-metal-game-development)
+Individual projects are organised and set out on the [Projects](projects/) page.
 
 ## Glossary
 

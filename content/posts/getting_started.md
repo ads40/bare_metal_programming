@@ -1,7 +1,7 @@
 +++
 title = "Getting started with Raspberry Pi 4 bare metal development"
 date = 2023-09-26
-draft = false
+draft = true
 
 [taxonomies]
 categories = ["rpi4"]
@@ -60,16 +60,38 @@ renowned "From Nand to Tetris" course created by Noam Nisan and Shimon Schocken:
   - [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer)
   - [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2)
 
-But we will try to spell out assumptions and knowledge as we go along, and in
-particular we will try to define important terminology in the Glossary.
+But we will try to spell out assumptions and required knowledge as we go along,
+and in particular we will try to define important terminology in the Glossary.
 
-## Set-up
+## Things you need
 
+Required physical items:
 
+- Development machine, preferably Linux (use WSL2 on Windows)
+- Raspberry Pi 4 (BCM2711 SOC)
+- USB to TTL serial cable
+- SD card
+- SD card reader (if not built-in to your computer)
+
+Required software set-up:
+
+- Development environment on your development machine, e.g. VSCode.
+- Cross-compilation ARM tools for the AArch64 bare-metal target 
+  (aarch64-none-elf):
+    - [ARM Developer toolchain downloads](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+
+We will assume that these items are accessible and/or installed, but we will
+walk through the actual set up to get things working step by step in the next
+post.
 
 ## Resources
 
-- The RPi4 OS dev Tutorial from Adam Greenwood-Byrne (GitHub: isometimes)
-  - Tutorial website: https://www.rpi4os.com/
-  - GitHub repo: https://github.com/isometimes/rpi4-osdev
+- The RPi4 OS dev Tutorial from Adam Greenwood-Byrne [GitHub: `isometimes`](https://github.com/isometimes)
+  - Tutorial website: [https://www.rpi4os.com/](https://www.rpi4os.com/)
+  - GitHub repo: [https://github.com/isometimes/rpi4-osdev](https://github.com/isometimes/rpi4-osdev)
+- Related tutorials and how-tos, focused on Raspberry Pi 3 models:
+  - [`rockytriton`'s Low Level Devel](https://github.com/rockytriton/LLD) and 
+    [Low Level Devel YouTube playlist](https://www.youtube.com/playlist?list=PLVxiWMqQvhg9FCteL7I0aohj1_YiUx1x8)
+  - [`s-matyukevich`'s Learning operating system development using Linux kernel and Raspberry Pi](https://github.com/s-matyukevich/raspberry-pi-os)
+  - [`bztsrc`'s Bare Metal Programming on Raspberry Pi 3](https://github.com/bztsrc/raspi3-tutorial)
 
