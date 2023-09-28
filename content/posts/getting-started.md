@@ -116,7 +116,8 @@ following items:
 - How the Raspberry Pi 4 machine is designed to behave when it is first turned
   on.
 - How to program for the Raspberry Pi 4 machine when it is operating at the
-  earliest stage of its boot process, using ARM-specific assembly language.
+  earliest stage of its kernel boot process, using ARM-specific assembly
+  language.
 - How to run the cross compilation tool chain on our development machine and
   then transfer the resulting compiled programs to the SD card and then into
   the Raspberry Pi.
