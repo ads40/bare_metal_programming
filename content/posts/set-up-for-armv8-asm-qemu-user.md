@@ -20,11 +20,47 @@ display_tags = true
 truncate_summary = false
 +++
 
+Learning about Armv8-A assembly when your main machine is x86 or the like
+presents some extra hurdles.
+
+One approach is simply to do the learning directly on a Raspberry Pi with the
+standard `gcc` toolchains that are already in place.
+
+Another approach is to use a fully fledged VM or full emulation via QEMU.
+
+But QEMU can also be used in "user mode" as a light-weight way to learn how to
+read and use Armv8-A assembly code on a main development machine that has a
+different architecture.
+
+## Assumptions and credits
+
+The instructions below assume that the main machine is Linux, and that the
+target is also Linux, but specifically `AArch64`.
+
+Using Linux as the basis for this work is sensible, so as to take advantage of
+the syscall infrastructure already in place, e.g. for writing to `stdout`.
+
+These instructions owe a great deal to the following how-tos from Maria
+Markstedter's Azeria Labs website:
+
+- [https://azeria-labs.com/arm-on-x86-qemu-user/](https://azeria-labs.com/arm-on-x86-qemu-user/)
+- [https://azeria-labs.com/debugging-with-gdb-introduction/](https://azeria-labs.com/debugging-with-gdb-introduction/)
+
+## Set up QEMU ready for user mode compilation and debugging
+
+First, set up the software infrastructure for cross compilation and using QEMU. 
 
 ```sh
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install qemu-user qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu binutils-aarch64-linux-gnu-dbg build-essential
 ```
+Next install the tools needed for using the debugger to explore the effects of
+your assembly code at the register level.
+
+```sh
+sudo apt install gdb-multiarch qemu-user
+```
+Create a test program in C to demonstrate that cross-compilation works.
 
 ```c
 /* test.c */
@@ -34,21 +70,41 @@ int main(void) {
     return printf("Hello! This program is executing ARMv8-A assembly.\n"); 
 }
 ```
+And compile the test program using the cross-compilation tool chain.
 
 ```sh
 aarch64-linux-gnu-gcc -o test test.c
 ```
+Running `file` on the executable that is output confirms that this is an Armv8-A
+ELF for `AArch64`.
 
 ```sh
 $ file test
 test: ELF 64-bit LSB shared object, ARM aarch64, <snip>
 ```
+Run the `AArch64` executable on your host machine using the QEMU user mode tool,
+and specify the source of the libraries that would otherwise be missing from
+the dynamic executable.
 
 ```sh
 qemu-aarch64 -L /usr/aarch64-linux-gnu ./test
 ```
 
+Alternatively, compile using the `-static` flag and `qemu-user-static` will,
+behind the scenes, enable the binary to "just work" even though it is running on
+the wrong architecture.
+
+```sh
+$ aarch64-linux-gnu-gcc -static -o test test.c
+$ file test
+test: ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), 
+statically linked, <snip>
+```
+
+Now create a test program in Armv8-A assembly.
+
 ```c
+/* hello_world.s */
 .section .text
 .global _start
 
@@ -69,20 +125,22 @@ msg:
 .ascii "Hello, world! This message was created via ARMv8-A assembly code.\n"
 len = . - msg
 ```
-
-
+Use the cross-compilation tool chain to assemble and then link the program into
+an executable. Make sure to use the `-ggdb` flag to build debugging symbols into
+the executable so that GDB can do its work more effectively.
 
 ```sh
-aarch64-linux-gnu-as hello_world.s -o hello_world.o
+aarch64-linux-gnu-as -ggdb hello_world.s -o hello_world.o
 aarch64-linux-gnu-ld hello_world.o -o hello_world
 ./hello_world
 ```
+Now we want to run the program, but in debugging mode, so that we can attach to
+the process and step through the lines of assembly and observe the effect of the
+assembly instructions on register state and on the output of the program.
 
-## Debugging
+In order to do this, we will open two separate terminal windows, one for the 
+QEMU user mode process, and one for the GDB debugger.
 
-```sh
-sudo apt install gdb-multiarch qemu-user
-```
 In one terminal window, start the QEMU user mode process:
 
 ```sh
@@ -93,8 +151,11 @@ And then connect to this process with the debugger in a separate terminal
 window:
 
 ```sh
-gdb-multiarch -q --nh -ex 'set architecture arm64' -ex 'file hello_world' -ex 'target remote localhost:1234' -ex 'layout split' -ex 'layout regs'
+gdb-multiarch -q --nh -ex 'set architecture aarch64' -ex 'file hello_world' -ex 'target remote localhost:1234' -ex 'layout split' -ex 'layout regs'
 ```
+
+You should now see the GDB TUI interface, including the registers.
 
 ![Debugging Arm assembly via QEMU User Mode](/img/debug-arm-via-qemu-user.png)
 
+TODO: add instructions for using the GDB TUI.
