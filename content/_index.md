@@ -17,7 +17,7 @@ then programming on top of these.
 The purpose of these writings is to document a learning path and to try to
 uncover as much of the underlying assumptions and required knowledge as
 possible. The layers of abstraction are what makes modern computing possible,
-but also very difficult to get one's head around, especially at the start.
+but also challenging to get one's head around, especially at the start.
 
 ## Content
 

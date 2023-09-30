@@ -56,18 +56,8 @@ Some knowledge of programming is assumed, in no particular language.
 
 Some knowledge of computing architecture and the layers of abstraction involved
 is also assumed, but only at a relatively low level, such as might be gained by
-the completion of the justly renowned "From Nand to Tetris" course created by
-Noam Nisan and Shimon Schocken:
-
-- The 'From Nand to Tetris' website: [https://www.nand2tetris.org/](https://www.nand2tetris.org/)
-- Nisan, Noam, and Shimon Schocken. 2021. *The Elements of Computing Systems:
-  Building a Modern Computer from First Principles*. Second edition. Cambridge,
-  Massachusetts: The MIT Press.
-  - [MIT Press](https://mitpress.mit.edu/9780262539807/the-elements-of-computing-systems/)
-  - [Amazon](https://www.amazon.com/Elements-Computing-Systems-second-Principles/dp/0262539802)
-- The Nand2Tetris courses on Coursera:
-  - [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer)
-  - [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2)
+the completion of [the justly renowned "From Nand to Tetris" course and textbook
+created by Noam Nisan and Shimon Schocken](/glossary/nand-to-tetris/).
 
 But we will try to spell out assumptions and required knowledge as we go along,
 and in particular we will try to define important terminology in the Glossary.

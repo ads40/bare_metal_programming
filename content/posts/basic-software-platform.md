@@ -71,8 +71,10 @@ configuration options.
 
 We don't need to touch the EEPROM firmware or configuration. Assuming that we
 have previously booted the Raspberry Pi 4 from the Raspberry Pi OS SD card, then
-the EEPROM will have been automatically updated as required by the Raspberry
-Pi OS automatic process.
+the EEPROM will have been automatically updated as required by the Raspberry Pi
+OS: "Raspberry Pi OS automatically updates the bootloader for critical bug
+fixes."
+([Raspberry Pi 4 Boot EEPROM](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#raspberry-pi-4-boot-eeprom)).
 
 ### `config.txt`
 
@@ -127,8 +129,10 @@ documentation:
 ## What about `kernel8.img` and Arm-specific assembly language?
 
 The kernel is the fundamental software layer running on the device, after the
-device's firmware has completed its initial bootstrapping set-up. The kernel
-that we develop for the Raspberry Pi 4 will be very limited.
+device's firmware has completed its initial bootstrapping set-up. For a given
+operating system, the
+[kernel intermediates the hardware layer from application code](https://en.wikipedia.org/wiki/Kernel_%28operating_system%29).
+The kernel that we develop for the Raspberry Pi 4 will be very limited.
 
 The default name expected for the kernel image that the firmware loads on the
 Raspberry Pi 4 is `kernel8.img`, targeting the Armv8-A 64-bit Instruction Set
@@ -147,6 +151,13 @@ For the RPi4, native assembly means the Armv8-A 64-bit ISA, also known as
 
 We will need to learn a little about Armv8-A assembly and some device-specific
 layout parameters in order to get a custom kernel image working.
+
+For an accessible introduction to Armv8-A assembly, work through the Armv8
+chapter of [Dive into Systems](/glossary/dive-into-systems/):
+
+- [Dive Into Systems > 9. ARMv8 Assembly](https://diveintosystems.org/book/C9-ARM64/index.html)
+
+We work through this material in the Arm v8-assembly project.
 
 However, much of the programming at this level is then done in C, as we build on
 top of this initial kernel layer written in assembly, but in a much easier to
