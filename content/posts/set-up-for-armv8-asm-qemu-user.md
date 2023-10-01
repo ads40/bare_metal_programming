@@ -5,7 +5,7 @@ draft = true
 
 [taxonomies]
 categories = ["arm-asm"]
-tags = ["emulation"]
+tags = ["emulation", "linux"]
 
 [extra]
 lang = "en"
@@ -23,8 +23,10 @@ truncate_summary = false
 Learning about Armv8-A assembly when your main machine is x86 or the like
 presents some extra hurdles.
 
-One approach is simply to do the learning directly on a Raspberry Pi with the
-standard `gcc` toolchains that are already in place.
+One approach, of course, is simply to do the learning directly on a Raspberry Pi
+with the standard `gcc` toolchains that are already in place. This gives direct
+access to an Armv8-A (assuming that you are running a 64-bit operating system
+on the Pi) processor, and you can experiment directly on the machine.
 
 Another approach is to use a fully fledged VM or full emulation via QEMU.
 

@@ -4,7 +4,7 @@ date = 2023-09-26
 draft = true
 
 [taxonomies]
-categories = ["rpi4"]
+categories = ["rpi4-bare-metal"]
 tags = ["bare-metal"]
 
 [extra]

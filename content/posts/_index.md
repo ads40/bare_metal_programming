@@ -1,6 +1,6 @@
 +++
 title = "Posts"
-description = "My posts go here."
+description = "All posts are collated here by category and date."
 sort_by = "date"
 template = "blog.html"
 page_template = "post.html"
