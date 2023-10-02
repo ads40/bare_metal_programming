@@ -165,7 +165,8 @@ read and write format.
 
 ## How does a cross compilation tool chain work?
 
-
+TODO
 
 ## Next steps
 
+TODO
