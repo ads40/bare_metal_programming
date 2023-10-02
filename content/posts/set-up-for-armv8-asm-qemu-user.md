@@ -1,5 +1,5 @@
 +++
-title = "Set up for learning Armv8-A assembly via QEMU User Mode"
+title = "Setting up for learning Armv8-A assembly via QEMU User Mode"
 date = 2023-09-30
 draft = false
 
@@ -28,7 +28,12 @@ with the standard `gcc` toolchains that are already in place. This gives direct
 access to an Armv8-A (assuming that you are running a 64-bit operating system
 on the Pi) processor, and you can experiment directly on the machine.
 
-Another approach is to use a fully fledged VM or full emulation via QEMU.
+See this post for this approach using Raspberry Pi 4:
+
+- [Setting up for learning Armv8-A assembly on RPi4](/posts/set-up-for-armv8-asm/)
+
+Another approach is to use a fully fledged VM or full emulation via QEMU. These
+approaches won't be covered here.
 
 But QEMU can also be used in "user mode" as a light-weight way to learn how to
 read and use Armv8-A assembly code on a main development machine that has a

@@ -28,7 +28,7 @@ on the machine.
 
 See also this post for an alternative approach using QEMU "user mode":
 
-- [Set up for learning Armv8-A assembly via QEMU User Mode](/posts/set-up-for-armv8-asm-qemu-user/)
+- [Setting up for learning Armv8-A assembly via QEMU User Mode](/posts/set-up-for-armv8-asm-qemu-user/)
 
 ## Set up
 
