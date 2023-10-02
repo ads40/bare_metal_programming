@@ -136,6 +136,9 @@ aarch64-linux-gnu-as -ggdb hello_world.s -o hello_world.o
 aarch64-linux-gnu-ld hello_world.o -o hello_world
 ./hello_world
 ```
+
+## Start the debugger
+
 Now we want to run the program, but in debugging mode, so that we can attach to
 the process and step through the lines of assembly and observe the effect of the
 assembly instructions on register state and on the output of the program.
@@ -160,4 +163,19 @@ You should now see the GDB TUI interface, including the registers.
 
 ![Debugging Arm assembly via QEMU User Mode](/img/debug-arm-via-qemu-user.png)
 
-TODO: add instructions for using the GDB TUI.
+What we do in the debugger depends on what we are trying to observe.
+
+For now, the focus will likely be on observing the effect of each assembly
+instruction on the registers.
+
+For this purpose, note the following commands in `gdb`:
+
+- `stepi`: this performs the next one assembly instruction (will step into
+  functions).
+- `nexti`: this performs the next single assembly instruction (but won't step
+  into function calls).
+
+Don't step into operating system function calls if you are simply trying to
+observe the effect of code that you have created.
+
+Use the command `quit` to exit `gdb` when you are done.

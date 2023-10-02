@@ -120,7 +120,7 @@ $ objdump -d build/adder > build/adder.outasm
 #   7dc:	d503201f 	nop
 ```
 
-## Building binaries from assembly code and using the debugger
+## Building binaries from assembly code and starting the debugger
 
 Working directly with hand-written assembly involves an extra step or two, and
 it is a good idea to be able to use the debugger to step through the compiled
@@ -179,5 +179,25 @@ The flags supplied here to `gdb` are:
   - `-ex 'layout regs'`: when already in split layout display the register,
     assembler, and command windows in the TUI.
 
+What we do in the debugger depends on what we are trying to observe.
+
+For now, the focus will likely be on observing the effect of each assembly
+instruction on the registers.
+
+For this purpose, note the following commands in `gdb`:
+
+- `stepi`: this performs the next one assembly instruction (and will step into
+  functions in detail).
+- `nexti`: this performs the next single assembly instruction (but won't step
+  into function calls in detail, but perform the call and return to the next
+  assembly instruction).
+
+For the documentation related to this, see the section titled
+["5.5 Continuing and Stepping"](https://sourceware.org/gdb/onlinedocs/gdb/Continuing-and-Stepping.html).
+
+Don't step into operating system function calls if you are simply trying to
+observe the effect of code that you have created.
+
+Use the command `quit` to exit `gdb` when you are done.
 
 
