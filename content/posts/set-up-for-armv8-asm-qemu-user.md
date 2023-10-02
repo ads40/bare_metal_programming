@@ -1,7 +1,7 @@
 +++
 title = "Set up for learning Armv8-A assembly via QEMU User Mode"
 date = 2023-09-30
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["arm-asm"]

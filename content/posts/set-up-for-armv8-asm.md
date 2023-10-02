@@ -1,7 +1,7 @@
 +++
 title = "Set up for learning Armv8-A assembly"
 date = 2023-10-01
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["arm-asm"]

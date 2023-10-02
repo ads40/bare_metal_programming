@@ -1,7 +1,7 @@
 +++
 title = "Getting started with Raspberry Pi 4 bare metal development"
 date = 2023-09-26
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["rpi4-bare-metal"]

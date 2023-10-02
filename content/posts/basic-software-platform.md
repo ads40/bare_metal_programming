@@ -1,7 +1,7 @@
 +++
 title = "A basic software platform for the Raspberry Pi 4"
 date = 2023-09-28
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["rpi4-bare-metal"]
