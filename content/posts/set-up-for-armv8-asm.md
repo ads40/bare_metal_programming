@@ -1,5 +1,5 @@
 +++
-title = "Set up for learning Armv8-A assembly"
+title = "Setting up for learning Armv8-A assembly on RPi4"
 date = 2023-10-01
 draft = false
 

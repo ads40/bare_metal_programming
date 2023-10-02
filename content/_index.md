@@ -7,8 +7,8 @@ lang = 'en'
 
 # Learning about Programming on Bare Metal Devices
 
-Here we learn about programming directly on bare metal computing devices, such
-as the Raspberry Pi 4.
+Here we learn about programming directly on bare metal computing boards, using
+such devices as the Raspberry Pi 4, but without an existing kernel.
 
 This touches on topics from CPU architecture, to the operations of a board, to
 low level programming in C, through to building up operating system services and
@@ -16,8 +16,9 @@ then programming on top of these.
 
 The purpose of these writings is to document a learning path and to try to
 uncover as much of the underlying assumptions and required knowledge as
-possible. The layers of abstraction are what makes modern computing possible,
-but also challenging to get one's head around, especially at the start.
+possible. The towering stack of layers of abstraction is what makes modern
+computing possible, but this is also what makes it quite challenging to get
+one's head around at the start.
 
 ## Content
 

@@ -157,7 +157,7 @@ chapter of [Dive into Systems](/glossary/dive-into-systems/):
 
 - [Dive Into Systems > 9. ARMv8 Assembly](https://diveintosystems.org/book/C9-ARM64/index.html)
 
-We work through this material in the Arm v8-assembly project.
+We work through this material in the Armv8-A assembly project.
 
 However, much of the programming at this level is then done in C, as we build on
 top of this initial kernel layer written in assembly, but in a much easier to

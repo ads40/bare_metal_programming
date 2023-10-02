@@ -15,6 +15,8 @@ We work through some learning materials for getting to grips with Armv8-A
 assembly.
 
 1. [Setting up for Armv8-A assembly via QEMU user mode](/posts/set-up-for-armv8-asm-qemu-user/)
+2. OR: [Setting up for learning Armv8-A assembly on RPi4](/posts/set-up-for-armv8-asm/)
+3. [Work through *Dive into Systems*, section 9.1](/posts/dive-into-systems-9.1/)
 
 ## Raspberry Pi 4: bare metal game development
 
