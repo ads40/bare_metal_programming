@@ -80,7 +80,7 @@ int main(void) {
 And compile the test program using the cross-compilation tool chain.
 
 ```sh
-aarch64-linux-gnu-gcc -o test test.c
+aarch64-linux-gnu-gcc -static -o test test.c
 ```
 Running `file` on the executable that is output confirms that this is an Armv8-A
 ELF for `AArch64`.
@@ -137,9 +137,10 @@ an executable. Make sure to use the `-ggdb` flag to build debugging symbols into
 the executable so that GDB can do its work more effectively.
 
 ```sh
-aarch64-linux-gnu-as -ggdb hello_world.s -o hello_world.o
-aarch64-linux-gnu-ld hello_world.o -o hello_world
-./hello_world
+mkdir build
+aarch64-linux-gnu-as -ggdb hello_world.s -o build/hello_world.o
+aarch64-linux-gnu-ld build/hello_world.o -o build/hello_world
+./build/hello_world
 ```
 
 ## Start the debugger
@@ -154,14 +155,16 @@ QEMU user mode process, and one for the GDB debugger.
 In one terminal window, start the QEMU user mode process:
 
 ```sh
-qemu-aarch64 -L /usr/aarch64-linux-gnu/ -g 1234 ./hello_world
+qemu-aarch64 -L /usr/aarch64-linux-gnu/ -g 1234 ./build/hello_world
 ```
 
 And then connect to this process with the debugger in a separate terminal
 window:
 
 ```sh
-gdb-multiarch -q --nh -ex 'set architecture aarch64' -ex 'file hello_world' -ex 'target remote localhost:1234' -ex 'layout split' -ex 'layout regs'
+gdb-multiarch -q --nh -ex 'set architecture aarch64' \
+-ex 'file build/hello_world' -ex 'target remote localhost:1234' \
+-ex 'layout split' -ex 'layout regs'
 ```
 
 You should now see the GDB TUI interface, including the registers.
